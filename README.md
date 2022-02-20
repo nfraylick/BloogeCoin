@@ -1,87 +1,20 @@
-![DeSo Logo](assets/camelcase_logo.svg)
+## Inspiration
+Cryptocurrency is becoming very common in our culture and not many people are educated on what it is. BloogeCoin is a coin that children and beginners of cryptocurrency can earn by learning about these emerging technologies and completing chores.
 
-# About DeSo
-DeSo is a blockchain built from the ground up to support a fully-featured
-social network. Its architecture is similar to Bitcoin, only it supports complex
-social network data like profiles, posts, follows, creator coin transactions, and
-more.
+## What it does
+BloogeCoin teaches children about cryptocurrency technologies by completing chores and understanding the crypto markets and other technologies. For example, a parent can set up an account and assign chores to do around the house and their child can earn BloogeCoin after their tasks are completed.
 
-[Read about the vision](https://docs.deso.org/the-vision)
+## How we built it
+Using the DeSo Blockchain, we created BloogeCoin and minted coins that can be earned. We developed an iOS app using Swift to assign tasks, check progress and account amount, and learn about cryptocurrencies and minting NFTs. The app's information is on google cloud and the services that help keep the application are also on Google Cloud. We use the Coinbase API to gather live information about cryptocurrencies on the crypto page.
 
-# About this Repo
+## Challenges we ran into
+We had a difficult time with the technical aspects of creating our own cryptocurrency. It was quite tough linking our program and project over our school's strict networks to join the blockchain. Minting NFTs were difficult to do as well. We wanted a free and mainstream way to host our NFTs on the blockchain.
 
-This repo contains all of the consensus code for the DeSo protocol. While it can 
-technically be built and run as a stand-alone binary, it is mainly intended to be
-"composed" into other projects that want to build on top of DeSo. We provide
-multiple examples of how to do this in this README.
+## Accomplishments that we're proud of
+We created our first cryptocurrency and learned a lot about emerging technologies and another cool project that exist on the DeSo blockchain. We are proud of the fact that we created a well-designed application for beginners to learn about cryptocurrency and earn some of their own.
 
-# Building on DeSo Core
+## What we learned
+We learned how to authenticate users using Google Cloud. DeSo has a lot of cool and popular projects and we learned how to use their decentralized social to create users and earn coins. We also learned the process of creating NFTs along with the minting and ownership of the art.
 
-Below we provide a few real-world examples of how to compose DeSo core into your project.
-
-## Example 1: A Standard DeSo App (e.g. [bitclout.com](https://bitclout.com) or [flickapp.com](https://flickapp.com))
-
-The code that powers DeSo apps like [bitclout.com](https://bitclout.com) is fully open-source
-such that anyone in the world can run it, and it consists of three repositories:
-* **[github.com/deso-protocol/backend](https://github.com/deso-protocol/backend)**
-* **[github.com/deso-protocol/frontend](https://github.com/deso-protocol/frontend)**
-* **[github.com/deso-protocol/identity](https://github.com/deso-protocol/identity)**
-
-The repo that is most interesting for understanding the role of DeSo core is
-[backend](https://github.com/deso-protocol/backend) because it effectively includes core
-as a library to run a node. Then, it builds on core's basic functionality to expose
-[a rich API](https://docs.deso.org/devs/backend-api) of its own that can be used to 
-construct transactions, submit transactions to the network, manage user data, and 
-much more.
-
-The backend repo's API is then utilized by
-[frontend](https://github.com/deso-protocol/frontend) and 
-[identity](https://github.com/deso-protocol/identity), which are Angular apps that are
-served as the frontend to apps like [bitclout.com](https://bitclout.com).
-
-## Example 2: A Rosetta API for Exchange Listing
-
-[Rosetta](https://rosetta-api.org) is an API developed by Coinbase and used by
-exchanges all over the world to list coins. For most modern exchanges, implementing a
-Rosetta API makes it a breeze to integrate a coin because all of their infrastructure
-can plug into a standardized interface.
-
-Because exchanges have a different set of needs than what's required to run a 
-DeSo web app, composing core allowed us
-to build a fully Dockerized Rosetta API that conforms perfectly to spec as its own
-self-contained service. This allows exchanges to integrate DeSo without having
-to run the unnecessary services associated with serving bitclout.com.
-
-For more information on the DeSo Rosetta API, see our rosetta-deso repo here:
-* **[https://github.com/deso-protocol/rosetta-deso](https://github.com/deso-protocol/rosetta-deso)**
-
-## Example 3: A MongoDB Data Dumper
-
-Another example of composing the core repo is the DeSo MongoDB Dumper.
-* **[github.com/deso-protocol/mongodb-dumper](https://github.com/deso-protocol/mongodb-dumper)**
-
-This tool does the following:
-* It includes core as a library
-* It uses its embedded core code to download all of the blockchain data
-* It takes all of the blockchain data and indexes it into MongoDB
-
-This gives users the ability to query all of the chain data using the MongoDB
-commandline tool, or to layer a product like Retool on top of it.
-
-# Running DeSo Core
-
-Because core is intended to be composed into other projects, we suggest that
-users who want to run it start by reading [the README in the backend repo](https://github.com/deso-protocol/backend)
-mentioned previously. This repo provides instructions on how set up a dev environment
-for a full frontend and backend stack that can serve a full clone 
-of apps like [bitclout.com](https://bitclout.com) with one's own custom feed.
-
-We also provide a [run repo](https://github.com/deso-protocol/run) that shows how to 
-run this full stack in a fully Dockerized production environment.
-
-# Acknowledgements
-
-The architecture for DeSo was heavily-inspired by Bitcoin. We also owe a debt
-of gratitude to the developers of [btcd](https://github.com/btcsuite/btcd) for
-producing a truly amazing Go Bitcoin client that served as a reference when
-building DeSo.
+## What's next for BloogeCoin
+We hope to continue to refine the UI since we spent most of our time creating the cryptocurrency and being able to earn after tasks are completed. We hope to continue to work on this project outside of the hackathon and incorporate more blockchain technologies.
